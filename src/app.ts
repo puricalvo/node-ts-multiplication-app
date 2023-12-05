@@ -4,7 +4,7 @@ import { ServerApp } from "./presentation/server-app";
 
 
 (async() => {
-    await main();    
+  await main();    
 })();
 
 async function main() {

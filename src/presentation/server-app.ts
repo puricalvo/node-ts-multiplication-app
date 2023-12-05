@@ -5,14 +5,13 @@ interface RunOptions {
     base: number;
     limit: number;
     showTable: boolean;
-    fileName: string;
     fileDestination: string;
+    fileName: string;
 }
 
 
 
 export class ServerApp {
-
 
 
     static  run({ base, limit, showTable, fileName, fileDestination }: RunOptions ) {
@@ -22,12 +21,12 @@ export class ServerApp {
         
         const wasCreated = new SaveFile()
             .execute({ 
-                fileContet: table, 
+                fileContent: table, 
                 fileName: fileName, 
                 fileDestination: fileDestination 
             });
 
-        if ( showTable) console.log(table);
+        if ( showTable) console.log(table); 
 
         ( wasCreated)
         ? console.log('File created!')

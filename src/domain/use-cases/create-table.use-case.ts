@@ -12,7 +12,6 @@ export interface CreateTableOptions {
 export class CreateTable implements CreateTableUseCase {
 
     constructor(
-        
         /*
           DI - Dependency Injection 
         */         
@@ -22,7 +21,9 @@ export class CreateTable implements CreateTableUseCase {
 
         let outputMessage = '';
         for(let i = 1; i <= limit; i++) {
-            outputMessage += `${ base } x ${ i } = ${ base * i }\n`;
+            outputMessage += `${ base } x ${ i } = ${ base * i }`;
+
+            if ( i < limit ) outputMessage += '\n';
         }
 
         return outputMessage;

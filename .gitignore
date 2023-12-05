@@ -3,3 +3,7 @@
 node_modules/
 dist/
 outputs/
+
+custon-outputs/
+test-destination/
+coverage/
